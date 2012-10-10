@@ -9,6 +9,7 @@ regal = libenv.Clone()
 
 regal.Append(CPPDEFINES = [
     'REGAL_NO_PNG',
+    'LIBRARYBUILD',
 ])
 
 regal.Append(CPPPATH = [
@@ -21,6 +22,8 @@ regal.Append(CPPPATH = [
     'src/glu/libnurbs/interface',
     'src/glu/libnurbs/nurbtess',
     'src/glew/include',
+    'src/md5/include',
+    'src/boost',
 ])
 
 # regal Sources
@@ -145,10 +148,10 @@ sources = [
     'src/glu/libnurbs/nurbtess/searchTree.cc',
 
     # GLEW
-    'src/glew/src/glew.c',
+    # 'src/glew/src/glew.c',
 
     # GLEWinfo
-    'src/glew/src/glewinfo.c',
+    # 'src/glew/src/glewinfo.c',
 ]
 
 non_sources = [
